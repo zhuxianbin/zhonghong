@@ -1,0 +1,339 @@
+body {
+    font-size: 14px;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.zh-header {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 80px;
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.zh-header .logo {
+    height: 50px;
+    margin-right: 50px;
+}
+
+.zh-header .navbar {
+    margin-bottom: 0;
+}
+
+.zh-header .zh-container {
+    position: relative;
+}
+
+.zh-header .zh-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    color: #ddd;
+}
+
+.nav>li>a {
+    color: #fff;
+    border-bottom:2px solid transparent;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: transparent;
+    border-bottom:3px solid #A6D5FD;
+}
+
+.PingFangSC-Light {
+    font-family: "PingFangSC-Light";
+}
+
+.img-r {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.t-32 {
+    font-size: 32px;
+}
+
+.t-28 {
+    font-size: 28px;
+}
+
+.t-26 {
+    font-size: 26px;
+}
+
+.t-24 {
+    font-size: 24px;
+}
+
+.t-20 {
+    font-size: 20px;
+}
+
+.t-18 {
+    font-size: 16px;
+}
+
+.t-16 {
+    font-size: 16px;
+}
+
+.t-14 {
+    font-size: 14px;
+}
+
+.t-12 {
+    font-size: 12px;
+}
+
+.t-gray {
+    color: #999;
+}
+
+.t-green {
+    color: #6bb209;
+}
+
+.t-blue {
+    color: #3d9ff9;
+}
+
+.t-bold {
+    font-weight: bold;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-r {
+    position: relative;
+}
+
+.block-a {
+    position: absolute;
+}
+
+.hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #eee;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.f-2 {
+    padding: 50px 0 0;
+    background: #f8f8f8;
+}
+
+.f-2 .box {
+    border: 1px solid #fff;
+    background: #fff;
+    transition: all 0.3s;
+    width: 300px;
+    margin: 0 auto;
+    padding: 50px 0;
+    height: 350px;
+    margin-bottom: 50px;
+}
+
+.f-2 .box:hover {
+    transform: scale(1.1);
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.03);
+}
+
+.f-3 {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.f-3 .box-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: 0 auto;
+    border: 3px solid #ccc;
+    margin-bottom: 30px;
+    padding: 30px 25px;
+}
+
+.f-3 .box-img:hover {
+    border-color: #3d9ff9;
+}
+
+.f-4 {
+    padding: 50px 0 0;
+    background: #f8f8f8;
+}
+
+.f-4 .box {
+    position: absolute;
+    left: 50%;
+    padding: 5px 20px;
+    background: #d8d8d8;
+    border-radius: 8px;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.f-4 .box:hover {
+    transform: scale(1.02);
+}
+
+.f-4 .box-1 {
+    margin-left: -220px;
+    top: 100px;
+}
+
+.f-4 .box-2 {
+    margin-left: -330px;
+    top: 10px;
+}
+
+.f-4 .box-3 {
+    margin-left: 80px;
+    top: 30px;
+}
+
+.f-4 .box-4 {
+    margin-left: 110px;
+    top: 110px;
+}
+
+.f-5 {
+    padding: 50px 0;
+}
+
+.f-5 .box {
+    background: #fff;
+    border: 1px dashed #999;
+    padding: 40px;
+    height: 330px;
+}
+
+.f-6 {
+    padding: 50px 0;
+    background: #fbfeff;
+}
+
+.f-6 .box {
+    background: #fff;
+    box-shadow: 0 0 10px 2px #ecf7ff;
+    padding: 20px;
+    height: 260px;
+}
+
+.f-7 {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.f-8 {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.f-8 .box {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+    color: #00C7A0;
+    text-align: center;
+    padding: 20px;
+}
+
+.f-8 .box:hover {
+    background: #00c7a0;
+    border: 1px solid #00c7a0;
+    color: #fff;
+}
+
+.f-8 .box:hover .t-gray {
+    color: #fff;
+}
+
+.f-9 {
+    padding: 50px 0 100px;
+    background: #f8f8f8;
+}
+
+.f-9 .box {
+    transition: all .3s;
+}
+
+.f-9 .box:hover {
+    transform: translateY(-20px);
+}
+
+.f-10 {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.f-10 .box {
+    color: #fff;
+}
+
+.footer {
+    padding: 50px 0;
+    background: #00142E;
+    color: #fff;
+}
+
+.footer .form {
+    font-size: 0;
+}
+
+.footer .form input {
+    background: #fff;
+    border: 0;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    width: 200px;
+}
+
+.footer .form button {
+    background: #3D9FF9;
+    border: 0;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+}
