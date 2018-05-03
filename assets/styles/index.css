@@ -41,6 +41,7 @@ body {
 .nav>li>a {
     color: #fff;
     border-bottom:2px solid transparent;
+    font-size:18px;
 }
 
 .nav>li>a:focus,
@@ -156,6 +157,10 @@ body {
     margin-bottom: 30px;
 }
 
+.mb-50{
+    margin-bottom: 50px;
+}
+
 .f-2 {
     padding: 50px 0 0;
     background: #f8f8f8;
@@ -261,7 +266,7 @@ body {
 
 .f-7 {
     padding: 50px 0;
-    background: #fff;
+    background: #f8f8f8;
 }
 
 .f-8 {
