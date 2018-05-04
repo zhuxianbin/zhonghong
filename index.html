@@ -23,6 +23,34 @@
       fill: currentColor;
       overflow: hidden;
     }
+
+    .pagination {
+      position: absolute;
+      z-index: 20;
+      left: 50%;
+      bottom: 0;
+      margin-left: -26px;
+    }
+
+    .swiper-pagination-switch {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background: #222;
+      margin-right: 5px;
+      opacity: 0.7;
+      border: 1px solid #fff;
+      cursor: pointer;
+    }
+
+    .swiper-visible-switch {
+      background: #aaa;
+    }
+
+    .swiper-active-switch {
+      background: #fff;
+    }
   </style>
 </head>
 
@@ -73,7 +101,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <div class="home">
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -86,6 +114,7 @@
           <div style='background: url(./assets/images/banner3.png) no-repeat center bottom;height:600px;'></div>
         </div>
       </div>
+      <div class="pagination"></div>
     </div>
   </div>
   <div class="f-2" id='about'>
@@ -465,14 +494,41 @@
       <div class="block-r" style='margin: 40px 100px 80px;'>
         <img class="block-a" style='left:0;top:0;height:40px;' src="./assets/images/yh-left.png">
         <img class="block-a" style='right:0;bottom:0;height:40px;' src="./assets/images/yh-right.png">
-        <div class="t-center t-24 mb-20">
-          凡普金科
-        </div>
-        <div class="t-center t-gray" style='line-height: 28px;'>
-          凡普金科是中国最大综合性金融平台
-          <br> 产品效果：解决了凡普多职场分布集中管理、多业务高效处理、催交智能化的一体化客户服务解决方案
-        </div>
 
+
+        <div class="swiper-container" style='height:120px;'>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">
+              <div class="case">
+                <div class="t-center t-24 mb-20">
+                  凡普金科
+                </div>
+                <div class="t-center t-gray" style='line-height: 28px;'>
+                  凡普金科是中国最大综合性金融平台
+                  <br> 产品效果：解决了凡普多职场分布集中管理、多业务高效处理、催交智能化的一体化客户服务解决方案
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide red-slide">
+              <div class="t-center t-24 mb-20">
+                趣店
+              </div>
+              <div class="t-center t-gray" style='line-height: 28px;'>
+                趣店是中国最大的消费贷金融平台
+                <br> 产品效果：解决了趣店、多职场分布集中管理、多呼叫策略催交智能化、高效化服务客户一体化
+              </div>
+            </div>
+            <div class="swiper-slide orange-slide">
+              <div class="t-center t-24 mb-20">
+                嗨学网
+              </div>
+              <div class="t-center t-gray" style='line-height: 28px;'>
+                嗨学网是中国最专业的职业资格考试在线培训平台
+                <br> 产品效果：解决了嗨学网多职场分布集中管理、营销自动化、数据分配智能化、坐席管理数据化提高整体营销效果
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class='col-xs-12 col-sm-4'>
@@ -589,9 +645,20 @@
   <script src="./assets/scripts/idangerous.swiper2.7.6.min.js"></script>
   <script type="text/javascript">
     window.onload = function () {
-      var mySwiper = new Swiper('.swiper-container', {
-        autoplay: 6180
+      new Swiper('.home .swiper-container', {
+        autoplay: 6180,
+        pagination: '.home .pagination',
+        paginationClickable: true
       });
+
+      var mySwiper = new Swiper('.f-9 .swiper-container');
+
+      var f9box = $('.f-9 .box').hover(function (e) {
+        e.preventDefault();
+        mySwiper.swipeTo(f9box.index(this));
+        //$(f9case[f9box.index(this)]).show();
+      })
+
     }
   </script>
 </body>
