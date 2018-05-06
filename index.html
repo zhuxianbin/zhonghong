@@ -77,16 +77,16 @@
                 <a href="./">首页</a>
               </li>
               <li>
-                <a href="#about">产品介绍</a>
+                <a class="link" href="#about">产品介绍</a>
               </li>
               <li>
-                <a href="#server">售后服务</a>
+                <a class="link" href="#server">售后服务</a>
               </li>
               <li>
-                <a href="#case">客户案例</a>
+                <a class="link" href="#case">客户案例</a>
               </li>
               <li>
-                <a href="#contact">联系我们</a>
+                <a class="link" href="#contact">联系我们</a>
               </li>
             </ul>
           </div>
@@ -586,7 +586,7 @@
               <div class="t-28 mb-5">
                 服务为本
               </div>
-              中弘科技成立以来已经为爱钱进、嗨学网、趣店、凡普金科等国内众多知名企业提供呼叫中心产品和服务
+              中弘科技为客户提供专职的客户服务经理，负责客户日常问题的解决。客户的满意才是我们生存的根本。
             </div>
           </div>
         </div>
@@ -610,8 +610,8 @@
       <div class="t-20 mb-20">联系我们</div>
       <div class="row">
         <div class='col-xs-12 col-sm-8'>
-          <form class="mb-20 form">
-            <input placeholder="输入手机号">
+          <form class="mb-20 form" onsubmit="return false;">
+            <input name='mobile' placeholder="输入手机号">
             <button type='submit'>申请使用</button>
           </form>
           <div style="margin-bottom: 60px;line-height: 24px;">
@@ -660,6 +660,26 @@
       })
 
     }
+
+    $('.nav a.link').click(function (event) {
+      console.dir(this);
+      event.preventDefault();
+      var hash = "#" + this.href.split('#')[1];
+      //console.log(hash);
+      $("html,body").animate({
+        scrollTop: ($(hash).offset().top - 80) + 'px'
+      }, 618);
+
+      return false;
+    })
+
+    $('.form').submit(function(e){
+      return alert('申请使用成功，销售经理马上会与您联系。');
+      $.get('/url?'+$(this).serialize(),function(){
+        //return alert('申请使用成功，销售经理马上会与您联系。');
+      })
+    });
+
   </script>
 </body>
 
