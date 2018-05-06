@@ -77,16 +77,16 @@
                 <a href="./">首页</a>
               </li>
               <li>
-                <a class="link" href="#about">产品介绍</a>
+                <a data-href="#about" href="#about">产品介绍</a>
               </li>
               <li>
-                <a class="link" href="#server">售后服务</a>
+                <a data-href="#server"  href="#server">售后服务</a>
               </li>
               <li>
-                <a class="link" href="#case">客户案例</a>
+                <a data-href="#case"  href="#case">客户案例</a>
               </li>
               <li>
-                <a class="link" href="#contact">联系我们</a>
+                <a data-href="#contact" href="#contact">联系我们</a>
               </li>
             </ul>
           </div>
@@ -661,15 +661,13 @@
 
     }
 
-    $('.nav a.link').click(function (event) {
-      console.dir(this);
+    $('.nav a[data-href]').click(function (event) {
+      //console.dir(this);
       event.preventDefault();
-      var hash = "#" + this.href.split('#')[1];
-      //console.log(hash);
+      var hash = $(this).data('href');
       $("html,body").stop().animate({
         scrollTop: ($(hash).offset().top - 80) + 'px'
       }, 618);
-
       return false;
     })
 
