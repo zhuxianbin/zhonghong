@@ -613,7 +613,7 @@
       <div class="row">
         <div class='col-xs-12 col-sm-8'>
           <form class="mb-20 form" onsubmit="return false;">
-            <input name='mobile' placeholder="输入手机号">
+            <input name='phone' placeholder="输入手机号">
             <button type='submit'>申请使用</button>
           </form>
           <div style="margin-bottom: 60px;line-height: 24px;">
@@ -674,10 +674,14 @@
     })
 
     $('.form').submit(function (e) {
-      return alert('申请使用成功，销售经理马上会与您联系。');
-      $.get('/url?' + $(this).serialize(), function () {
-        //return alert('申请使用成功，销售经理马上会与您联系。');
-      })
+      var phone = $("input[name='phone']").val();
+      $.ajax({
+        url: 'http://hp-api.izhzx.com/mail/send/' + phone,
+        methods: "get",
+        complete: function () {
+          return alert('申请使用成功，销售经理马上会与您联系。');
+        }
+      });
     });
   </script>
 </body>
